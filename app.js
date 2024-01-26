@@ -25,7 +25,6 @@ app.use("/listing", listingRouter);
 app.all("*", (req, res, next) => {
   next(new ErrorHandler("Page Not Found", 404, "fail"));
 });
-//  TODO: Implement better errorHandler
 app.use((err, req, res, next) => {
   console.log(err.stack);
 
