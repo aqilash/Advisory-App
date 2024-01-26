@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Listings</title>
+  </head>
+  <body>
+    <h1>All Listings by</h1>
+    <% if( role === 'a') {%>
+    <div>
+      <a href="/listing/add">Add Campground</a>
+    </div>
+    <% } %>
+    <ul>
+      <% for (let listing of listings){%>
+      <li><a href="/listing/<%= listing.id %>"><%= listing.name %></a></li>
+      <% }%>
+    </ul>
+    <div>
+      <a href="/auth/admin">Logout</a>
+    </div>
+  </body>
+</html>

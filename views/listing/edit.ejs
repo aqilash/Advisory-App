@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Listing</title>
+  </head>
+  <body>
+    <h1>Edit Listing</h1>
+    <form action="/listing/<%=listing.id%>?_method=PUT" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="listing[name]"
+          value="<%=listing.name %>"
+          required
+        />
+      </div>
+      <div>
+        <label for="lat">Latitude</label>
+        <input
+          type="number"
+          id="lat"
+          name="listing[latitude]"
+          value="<%= listing.latitude%>"
+          step="any"
+          min="-90"
+          max="90"
+          required
+        />
+      </div>
+      <div>
+        <label for="long">Longitude</label>
+        <input
+          type="number"
+          id="long"
+          name="listing[longitude]"
+          value="<%= listing.longitude%>"
+          step="any"
+          min="-180"
+          max="180"
+          required
+        />
+      </div>
+      <button>Update</button>
+    </form>
+    <a href="/listing/<%= listing.id%>">Cancel</a>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Listing</title>
+  </head>
+  <body>
+    <form action="/listing" method="POST">
+      <div>
+        <label for="title">Listing Name</label>
+        <input type="text" id="title" name="listing[name]" required />
+      </div>
+      <div>
+        <label for="lat">Latitude</label>
+        <input
+          type="number"
+          id="lat"
+          name="listing[latitude]"
+          step="any"
+          min="-90"
+          max="90"
+          required
+        />
+      </div>
+      <div>
+        <label for="long">Longitude</label>
+        <input
+          type="number"
+          id="long"
+          name="listing[longitude]"
+          step="any"
+          min="-180"
+          max="180"
+          required
+        />
+      </div>
+      <button>Add Listing</button>
+    </form>
+    <a href="/listing">All Listings</a>
+  </body>
+</html>
