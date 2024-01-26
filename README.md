@@ -1,7 +1,7 @@
 # Advisory-App
 
 ## Application Setup
-1. Instsll package dependencies using:
+1. Install package dependencies using:
 ```
 npm install
 ```
@@ -11,7 +11,7 @@ npm run dev
 ```
 
 ## How to run prisma migrations
-1. generate the prisma client by running the following command in the terminal. The prisma client is used to run queries on your db:
+1. Generate the prisma client by running the following command in the terminal. The prisma client is used to run queries on your db:
 ```
 npx prisma generate
 ```
