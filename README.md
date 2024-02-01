@@ -1,11 +1,15 @@
 # Advisory-App
 
 ## Application Setup
-1. Install package dependencies using:
+1. Copy and fill in credentials in configuration file:
+```
+cp .env.example .env
+```
+2. Install package dependencies using:
 ```
 npm install
 ```
-2. To start application run:
+3. To start application run:
 ```
 npm run dev
 ```
